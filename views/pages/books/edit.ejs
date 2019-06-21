@@ -1,0 +1,12 @@
+<form class="hide-form--------------" action="/update/:id" method="post"> 
+  <!-- TODO: WORK ON HIDING THIS FORM, SOMEHOW -->
+  <input type="hidden" name="_method" value="<%- 'put' %>">
+  <input name="title" type="text" value="<%= book.title %>"/>
+  <input name="author" type="text" value="<%= book.author %>"/>
+  <input name="isbn" type="text" value="<%= book.isbn %>"/>
+  <input name="image_url" type="text" value="<%= book.image_url %>"/>
+  <input name="description" type="text" value="<%= book.description %>"/>
+  <input name="bookshelf" type="text" value="<%= book.bookshelf %>" required/>
+  <input type="hidden" name="id" value="<%= book.id %>"/>
+  <button type="submit">Submit Updated Details</button>
+</form>

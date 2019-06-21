@@ -17,10 +17,18 @@
   font-size: 1.5em;
 }
 
+
 a {
   color: whitesmoke; 
   background-color: rgb(20, 20, 20); 
 
+}
+
+
+
+h1 {
+  font-size: 25px;
+  font-weight: bold;
 }
 
 

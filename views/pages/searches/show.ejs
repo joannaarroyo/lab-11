@@ -11,7 +11,7 @@
     <div class="books" data-book-id="<%= book.isbn %>">
       <img src="<%= book.image_url %>" alt="">
       <li class="title"><%= book.title %></li>
-      <li class="author"><%= book.authors %></li>
+      <li class="author"><%= book.author %></li>
       <li class="description"><%= book.description %></li>
       <div class="select-button" type="submit">Select This Book</div>
       <%- include('form', {book: book}) %>
