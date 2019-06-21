@@ -1,9 +1,10 @@
-'use strict'
+'use strict';
 
 // Application Dependencies
 const express = require('express');
 const superagent = require('superagent');
 const pg = require('pg');
+const methodOverride = require('method-override');
 
 // Environment Variables
 require('dotenv').config();
@@ -14,8 +15,17 @@ const PORT = process.env.PORT || 3000;
 
 //Application Middleware
 app.use(express.urlencoded({ extended: true }));
-// app.use(express.urlencoded({extended:true}));
 app.use(express.static('./public'));
+
+// Middleware to handle PUT and DELETE - TODO: Understand this!!
+app.use(methodOverride((request, response) => {
+  if (request.body && typeof request.body === 'object' && '_method' in request.body) {
+    // look in urlencoded POST bodies and delete it
+    let method = request.body._method;
+    delete request.body._method;
+    return method;
+  }
+}))
 
 // Database Setup
 const client = new pg.Client(process.env.DATABASE_URL);
@@ -31,6 +41,8 @@ app.post('/searches', createSearch);
 app.get('/searches/new', newSearch);
 app.post('/books', createBook);
 app.get('/books/:id', getBook);
+app.put('/update/:id', updateBook);
+//app.delete TODO: DELETE
 
 // Catch all
 app.get('*', (request, response) => response.status(404).send('This route really does not exist'));
@@ -81,7 +93,6 @@ function createSearch (request, response){
     .catch(error => handleError(error, response));
 }
 
-// Add new book to DB and render view
 function createBook(request, response){
   let {title, author, isbn, image_url, description, bookshelf} = request.body;
   let SQL = 'INSERT INTO books (title, author, isbn, image_url, description, bookshelf) VALUES ($1, $2, $3, $4, $5, $6)';
@@ -92,18 +103,35 @@ function createBook(request, response){
       SQL = 'SELECT * FROM books WHERE isbn=$1;';
       values = [request.body.isbn];
       return client.query(SQL, values)
-        .then(result => response.redirect(`/books/${result.rows[0].id}`))
+        .then(result => response.redirect(`/books/${result.rows[0].id}`)) //TODO: add result.rows[0], bookshelves: shelves.rows
         .catch(error => handleError(error, response))
     })
     .catch(error => handleError(error, response));
 }
 
-// Book details page
 function getBook (request, response){
   let SQL = `SELECT * FROM books WHERE id=${request.params.id};`;
-  client.query(SQL) //do not need return here
-    .then(result => response.render('pages/books/show', {book: result.rows[0]}))
+  client.query(SQL)
+    .then(result => {
+      response.render('pages/books/show', {book: result.rows[0]});
+    })
     .catch(error => handleError(error, response));
+}
+
+function updateBook(request, response){
+  let {title, author, isbn, image_url, description, bookshelf, id} = request.body;
+  let SQL = `UPDATE books SET title=$1, author=$2, isbn=$3, image_url=$4, description=$5, bookshelf=$6 WHERE id=$7;`;
+  let values = [title, author, isbn, image_url, description, bookshelf, id];
+
+  client.query(SQL, values)
+    .then(response.redirect(`/books/${id}`))
+    .catch(error => handleError(error, response));
+}
+
+//TODO: add below?
+function getBookshelves(){
+  let SQL = 'SELECT DISTINCT bookshelf FROM books ORDER BY bookshelf';
+  return client.query(SQL);
 }
 
 function handleError (error, response){

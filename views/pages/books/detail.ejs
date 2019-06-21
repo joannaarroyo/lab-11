@@ -5,6 +5,8 @@
   <li class="description"><%= book.description %></li>
   <li class="isbn">ISBN: <%= book.isbn %></li>
   <li class="bookshelf">Bookshelf: <%= book.bookshelf %></li>
+  <button class="select-button" type="submit">Update Book</button>
+  <%- include('edit', {book: book}) %>
 </section>
 
 
