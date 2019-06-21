@@ -2,7 +2,7 @@
 
 body{
     width: 480px;
-    background: linear-gradient(#1D47BA, #5F9BA9, #A3D4DE, #F6F9FB);
+    background: linear-gradient(#1D47BA, #5F9BA9, #A3D4DE, #F6F9FB) no-repeat;
     font-family: 'Nunito', sans-serif;
     margin: 0 auto;
 }

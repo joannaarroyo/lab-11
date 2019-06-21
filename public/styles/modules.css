@@ -12,26 +12,33 @@
   margin-bottom: 30px;
 }
 
- a {
-  color:black;
-} 
-
 h1 {
+  color: black;
   font-size: 25px;
   font-weight: bold;
 }
 
+a {
+  color: black;
+  font-size: 0.8em;
+} 
 
 li {
   font-weight: bold;
-  padding: 10px;
+  padding: 15px;
   font-size: 20px;
   padding-left: 25px;
  
 }
 
+.nav-list {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 li.description{
   background-color: #deedf0;
+  margin-top: 15px;
   margin-bottom: 15px;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -77,8 +84,20 @@ a:hover{
 
 input {
   height: 15px;
+  width: 70%;
+  margin: 5px;
+  text-align: center;
 }
 
 #select-bookshelf{
-  margin-left: 10px;
+  margin: 10px;
+  width: 70%;
+  text-align: center;
+}
+
+fieldset {
+  width: 80%;
+  margin-left: 40%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

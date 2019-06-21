@@ -2,8 +2,11 @@ header {
     background-color: #c7c7c7;
     border-radius: 10px;
     padding: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     text-align: left;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
 
@@ -11,35 +14,34 @@ h1 {
     font-size: 25px;
     font-weight: bold;
     padding: 10px;
-    padding-left: 25px;
+    padding-left: 15px;
 }
   
 h3{
     background-color:#c7d1d3;
     color: black;
     padding: 5px;
+    padding-left: 15px;
     height: 30px;
-    width: 150px;
-    float: left;
+    width: 200px;
     line-height: 30px;
     font-size: 18px;
-    padding-left: 25px;
-    margin-top: 12px;
-    margin-right: 25px;
     border-radius: 10px;
 }
-p{
+
+p {
     background-color: #c7d1d3;
     color: black;
     padding: 5px;
+    padding-left: 15px;
     height: 30px;
     line-height: 30px;
     font-size: 18px;
-    margin-top: 12px;
     border-radius: 10px;
+    margin: 0 auto;
+    font-size: 0.9em;
   }
   
-
 h4{
     font-size: 25px;
     font-weight: 600;
@@ -86,11 +88,9 @@ section {
 
 li#footer{
     font-size: 15px;
-    line-height: 75px;
-    margin-top: 30px;
+    line-height: 50px;
     text-align: center;
 }
-
 
 footer {
     background-color: #c7d1d3;
