@@ -1,30 +1,20 @@
 
 .books {
-  border: 1px solid black;
-  box-shadow: 3px 3px 5px black;
-  border-radius: 3px;
-  background: gray;
+  box-shadow: 3px 3px 5px #5c5158;
+  border-radius: 90px;
+  background:#f6f9fb;
   text-align: center;
   padding: 30px 0px 30px 0px;
   margin: 0 auto;
   color: black;
-  width: 500px;
+  width: 400px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
-.title {
-  font-size: 1.5em;
-}
-
-
-a {
-  color: whitesmoke; 
-  background-color: rgb(20, 20, 20); 
-
-}
-
-
+ a {
+  color:black;
+} 
 
 h1 {
   font-size: 25px;
@@ -41,29 +31,25 @@ li {
 }
 
 li.description{
-  background-color: whitesmoke;
+  background-color: #deedf0;
   margin-bottom: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
 }
 
 .description {
-  width: 400px;
+  width: 300px;
   margin: 0 auto;
   text-align: left;
+  font-family: 'Open Sans', sans-serif;
   height: 150px;
   overflow: scroll;
+  border-radius: 15px;
   
 }
 
 .hide-form {
   display: none;
-}
-
-button{
-  background-color:rgb(31, 30, 30);
-  padding: 8px;
-  border-style: solid;
-  border-color:rgb(31, 30, 30);
-  border-radius: 15px;
 }
 
 .select-button{
@@ -82,21 +68,17 @@ button{
 }
 
 button:hover{
-  color: rgb(198, 241, 211);
-  color-adjust: white;
-}
-
-#google-button {
-  background-color: chartreuse;
-  color: whitesmoke;
-  margin-top: 10px;
-
+  color: rgb(161, 160, 160);
 }
 
 a:hover{
-  color: lightgrey;
+  color: rgb(161, 160, 160);
 }
 
 input {
   height: 15px;
+}
+
+#select-bookshelf{
+  margin-left: 10px;
 }

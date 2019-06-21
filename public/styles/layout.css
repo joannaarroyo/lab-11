@@ -1,6 +1,9 @@
 header {
-    background-color: rgb(20, 20, 20);
+    background-color: #c7c7c7;
+    border-radius: 10px;
     padding: 5px;
+    text-align: left;
+    font-weight: bold;
 }
 
 
@@ -12,14 +15,30 @@ h1 {
 }
   
 h3{
-    background-color: rgb(107, 52, 45);
-    color: whitesmoke;
-    padding: 10px;
+    background-color:#c7d1d3;
+    color: black;
+    padding: 5px;
+    height: 30px;
+    width: 150px;
+    float: left;
+    line-height: 30px;
+    font-size: 18px;
+    padding-left: 25px;
+    margin-top: 12px;
+    margin-right: 25px;
+    border-radius: 10px;
+}
+p{
+    background-color: #c7d1d3;
+    color: black;
+    padding: 5px;
     height: 30px;
     line-height: 30px;
-    font-size: 20px;
-    padding-left: 25px;
-}
+    font-size: 18px;
+    margin-top: 12px;
+    border-radius: 10px;
+  }
+  
 
 h4{
     font-size: 25px;
@@ -33,30 +52,27 @@ main {
     width: 480px;
     text-align: center;
     margin: 0 auto;
-  
 }
 
 form {
-    border: 1px solid black;
-    box-shadow: 3px 3px 5px black;
-    border-radius: 3px;
-    background: gray;
+    box-shadow: 3px 3px 5px #5c5158;
+    border-radius: 10px;
+    background:  #c7d1d3;
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     padding: 30px 0px 30px 0px;
     margin: 0 auto;
     color: black;
-    width: 400px;
+    width: 300px;
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
 
 section {
-    border: 1px solid black;
-    box-shadow: 3px 3px 5px black;
-    border-radius: 3px;
-    background: gray;
+    border-radius: 90px;
+    font-family: 'Open Sans', sans-serif;
     text-align: center;
     padding: 30px 0px 30px 0px;
     margin: 0 auto;
@@ -68,13 +84,18 @@ section {
     
 }
 
-p{
-    background-color: rgb(107, 52, 45);
-    color: whitesmoke;
-    padding: 20pz;
-    height: 30px;
-    line-height: 30px;
-    font-size: 18px;
-    padding-left: 25px;
+li#footer{
+    font-size: 15px;
+    line-height: 75px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+footer {
+    background-color: #c7d1d3;
+    border-radius: 15px;
+    height: 75px;
+    list-style-type: none; 
+
   }
-  
