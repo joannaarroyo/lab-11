@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+/* 
+#F6F9FB White
+#5F9BA9 Teal
+#A3D4DE Light Teal
+#98AFC1 Grey
+#1D47BA Navy
+#155F9D Sea blue
+#5C5158 Brown
+*/
+
 body{
-    background-color: rgb(85, 121, 85);
+	width: 480px;
+	background: linear-gradient(#1D47BA, #5F9BA9, #A3D4DE, #F6F9FB);
+	font-family: 'Nunito', sans-serif;
+	margin: 0 auto;
 }

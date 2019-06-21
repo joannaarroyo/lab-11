@@ -1,5 +1,6 @@
 header {
-    background-color: rgb(20, 20, 20);
+    position: fixed;
+    background-color: transparent;
     padding: 5px;
 }
 
