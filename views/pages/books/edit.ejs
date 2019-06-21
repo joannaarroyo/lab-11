@@ -6,10 +6,12 @@
   <input name="isbn" type="text" value="<%= book.isbn %>"/>
   <input name="image_url" type="text" value="<%= book.image_url %>"/>
   <input name="description" type="text" value="<%= book.description %>"/>
-  <!-- <input name="bookshelf" type="text" value="<%= book.bookshelf %>" required/> -->
   <select id="select-bookshelf">
-    <option value="<%= book.bookshelf %>"><%= book.bookshelf %></option>
-    <option value="test">TEST</option>
+    <% bookshelves.forEach(shelf => { %>
+      <option value="<%= shelf.bookshelf %>" <%= shelf.bookshelf === book.bookshelf ? 'selected' : '' %> >
+        <%= shelf.bookshelf %>
+      </option>
+    <% }) %>
   </select>
   <input type="hidden" name="id" value="<%= book.id %>"/>
   <div id="submit-form"><button type="submit">Submit Updated Details</button></div>
