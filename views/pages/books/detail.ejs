@@ -1,10 +1,20 @@
 <section>
-  <img src="<%= book.image_url %>" alt="">
-  <li class="title"><%= book.title %></li>
-  <li class="author"><%= book.author %></li>
-  <li class="description"><%= book.description %></li>
-  <li class="isbn">ISBN: <%= book.isbn %></li>
-  <li class="bookshelf">Bookshelf: <%= book.bookshelf %></li>
+  <div class="books">
+    <img src="<%= book.image_url %>" alt="">
+    <li class="title"><%= book.title %></li>
+    <li class="author"><%= book.author %></li>
+    <li class="description"><%= book.description %></li>
+    <li class="isbn">ISBN: <%= book.isbn %></li>
+    <li class="bookshelf">Bookshelf: <%= book.bookshelf %></li>
+    <button class="submit-button" type="submit">Update Book</button>
+    <%- include('edit', {book: book}) %>
+
+    <form class="delete-form" action="/books/:id" method="post"> 
+      <input type="hidden" name="_method" value="<%- 'delete' %>"/>
+      <input type="hidden" name="id" value="<%= book.id %>"/>
+      <button class="delete-button" type="submit">Delete Book</button>
+    </form>
+  </div>
 </section>
 
 
