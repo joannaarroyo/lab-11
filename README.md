@@ -18,6 +18,12 @@ Libraries: PostgresSQL, EJS, superagent
 Day 1:
 Ability to search the Google Books API and render top 10 search results on that page
 
+## Style Guide
+Dribble: https://dribbble.com/shots/6657549-Stocks-Analysis-App  
+Background Linear Gradient: (#1D47BA, #5F9BA9, #A3D4DE, #F6F9FB)  
+Colors: 5F9BA9, A3D4DE, 98AFC1, 1D47BA, 155F9D, 5C5158  
+
+
 ***Number and name of feature:*** 1. I want my application to load quickly so that I have an enjoyable experience
 
 Estimate of time needed to complete: 1 hour
@@ -59,7 +65,30 @@ Start time: 10:00
 
 Finish time:12:40
 
-Actual time needed to complete: 2 hours
+Actual time needed to complete: 2 hours  
+
+## Day 4
+Number and name of feature: 1. Styling and Bug Fixes
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 9:00
+
+Finish time:12:00
+
+Actual time needed to complete: 3 hours  
+
+## Day 4
+Number and name of feature: 2. Normalization
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 12:00
+
+Finish time:12:15
+
+Actual time needed to complete: 15 minutes
+
 
 
 ## Credits and Collaborations
