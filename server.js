@@ -103,19 +103,22 @@ function createBook(request, response){
       SQL = 'SELECT * FROM books WHERE isbn=$1;';
       values = [request.body.isbn];
       return client.query(SQL, values)
-        .then(result => response.redirect(`/books/${result.rows[0].id}`)) //TODO: add result.rows[0], bookshelves: shelves.rows
+        .then(result => response.redirect(`/books/${result.rows[0].id}`))
         .catch(error => handleError(error, response))
     })
     .catch(error => handleError(error, response));
 }
 
 function getBook (request, response){
-  let SQL = `SELECT * FROM books WHERE id=${request.params.id};`;
-  client.query(SQL)
-    .then(result => {
-      response.render('pages/books/show', {book: result.rows[0]});
+  getBookshelves()
+    .then(shelves => {
+      let SQL = `SELECT * FROM books WHERE id=${request.params.id};`;
+      client.query(SQL)
+        .then(result => response.render('pages/books/show', {
+          book: result.rows[0],
+          bookshelves: shelves.rows}))
+        .catch(error => handleError(error, response));
     })
-    .catch(error => handleError(error, response));
 }
 
 function updateBook(request, response){
@@ -138,7 +141,7 @@ function deleteBook(request, response){
 
 //TODO: add below?
 function getBookshelves(){
-  let SQL = 'SELECT DISTINCT bookshelf FROM books ORDER BY bookshelf';
+  let SQL = 'SELECT DISTINCT bookshelf FROM books ORDER BY bookshelf;';
   return client.query(SQL);
 }
 
