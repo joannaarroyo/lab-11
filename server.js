@@ -54,7 +54,7 @@ function Book(info){
   let httpRegex = /^(http:\/\/)/g;
   let placeholderImage = 'https://i.imgur.com/J5LVHEL.jpg';
   this.title = info.title ? info.title : 'No title available';
-  this.authors = info.authors ? info.authors : 'No author available';
+  this.author = info.authors ? info.authors : 'No author available';
   this.isbn = info.industryIdentifiers ? `ISBN ${info.industryIdentifiers[0].identifier}` : 'No ISBN available';
   this.image_url = info.imageLinks ? info.imageLinks.smallThumbnail.replace(httpRegex, 'https://') : placeholderImage;
   this.description = info.description ? info.description : 'No description available';
