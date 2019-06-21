@@ -1,3 +1,4 @@
+
 .books {
   border: 1px solid black;
   box-shadow: 3px 3px 5px black;
@@ -16,15 +17,32 @@
   font-size: 1.5em;
 }
 
+
+a {
+  color: whitesmoke; 
+  background-color: rgb(20, 20, 20); 
+
+}
+
+
+
 h1 {
   font-size: 25px;
   font-weight: bold;
 }
 
+
 li {
   font-weight: bold;
-  margin: 12px;
-  padding: 5px;
+  padding: 10px;
+  font-size: 20px;
+  padding-left: 25px;
+ 
+}
+
+li.description{
+  background-color: whitesmoke;
+  margin-bottom: 15px;
 }
 
 .description {
@@ -33,8 +51,52 @@ li {
   text-align: left;
   height: 150px;
   overflow: scroll;
+  
 }
 
 .hide-form {
   display: none;
+}
+
+button{
+  background-color:rgb(31, 30, 30);
+  padding: 8px;
+  border-style: solid;
+  border-color:rgb(31, 30, 30);
+  border-radius: 15px;
+}
+
+.select-button{
+  background-color: whitesmoke;
+  text-align: center;
+  font-weight: bold;
+  height: 25px;;
+  line-height: 25px;
+  margin-right: 170px;
+  margin-left: 170px
+  
+}
+
+.select-button:hover{
+  color: rgb(148, 148, 148);
+}
+
+button:hover{
+  color: rgb(198, 241, 211);
+  color-adjust: white;
+}
+
+#google-button {
+  background-color: chartreuse;
+  color: whitesmoke;
+  margin-top: 10px;
+
+}
+
+a:hover{
+  color: lightgrey;
+}
+
+input {
+  height: 15px;
 }
