@@ -65,9 +65,8 @@ li.description{
   font-weight: bold;
   height: 25px;;
   line-height: 25px;
-  margin-right: 170px;
-  margin-left: 170px
-  
+  width: 50%;
+  margin: 0 auto;
 }
 
 .select-button:hover{
