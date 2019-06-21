@@ -42,7 +42,7 @@ app.get('/searches/new', newSearch);
 app.post('/books', createBook);
 app.get('/books/:id', getBook);
 app.put('/update/:id', updateBook);
-//app.delete TODO: DELETE
+app.delete('/books/:id', deleteBook);
 
 // Catch all
 app.get('*', (request, response) => response.status(404).send('This route really does not exist'));
@@ -125,6 +125,14 @@ function updateBook(request, response){
 
   client.query(SQL, values)
     .then(response.redirect(`/books/${id}`))
+    .catch(error => handleError(error, response));
+}
+
+function deleteBook(request, response){
+  const SQL = `DELETE FROM books WHERE id=${request.body.id}`;
+
+  client.query(SQL)
+    .then(response.redirect('/'))
     .catch(error => handleError(error, response));
 }
 
